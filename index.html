@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="./style.css">
+  <title>Survey Form</title>
+</head>
+
+<body>
+  <div id="intro">
+    <h1 id="title">Intake Survey Form</h1>
+    <p id="description">
+      Volunteers: Please fill out one survey form for every hound surrendered by owner, trainer, or shelter. Save as a PDF and
+      email form to somename@bigbottomedhoundies.org. Fields marked with an asterisk (*) are required.
+    </p>
+  </div>
+  <div id="form-div">
+    <form id="survey-form" action="submit">
+      <label for="intake-date">Intake Date</label>
+      <input type="date" id="intake-date" name="intake-date" required>
+      <!--     VOLUNTEER'S INFO -->
+      <fieldset id="volunteer_info">
+        <legend>
+          <h2>Volunteer's info:</h2>
+        </legend>
+        <label id="name-label" for="name">* Volunteer's Name</label>
+        <input id="name" name="name" type="text" placeholder="your name" required>
+        <label id="email-label" for="email">* email</label>
+        <input id="email" name="email" type="email" placeholder="emailaddress@domain.com" required>
+        <label for="phone">* phone</label>
+        <input type="tel" placeholder="(123)555-5555" required>
+        <label for="group">* Adoption Group</label>
+        <input name="group" type="text" placeholder="adoption group" required>
+      </fieldset>
+      <fieldset id="surrenderer">
+        <legend>
+          <h2>Surrenderer's info:</h2>
+        </legend>
+        <label for="surrenderer">* Surrendered by </label>
+        <input name="surrenderer" type="text" placeholder="trainer, track, shelter" required>
+        <label for="surr_email">email</label>
+        <input name="surr_email" type="email" placeholder="email">
+        <label for="phone">* phone</label>
+        <input type="tel" placeholder="(123)555-5555" required>
+      </fieldset>
+      <fieldset id="hound_info">
+        <legend>
+          <h2>Hound's info:</h2>
+        </legend>
+        <h3>Details</h3>
+        <label for="kennel">* Kennel name</label>
+        <input name="kennel" type="text" placeholder="kennel name" required>
+        <label for="race">Race name</label>
+        <input name="race" type="text" placeholder="race name">
+        <br />
+
+        <input type="radio" id="bitch" name="sex" value="bitch">
+        <label for="bitch">bitch</label>
+        <input type="radio" id="dog" name="sex" value="dog">
+        <label for="dog">dog</label>
+        <label id="number-label" for="age">* Estimated age</label>
+        <input name="age" id="age" type="number" value="1" step="0.1" min="0" max="15" required>
+        <br />
+        <label for="dam">dam</label>
+        <input name="dam" type="text" placeholder="dam name">
+        <label for="sire">sire</label>
+        <input name="sire" type="text" placeholder="sire name">
+        <br />
+        <label for="color">Color</label>
+        <select id="dropdown" name="color" required>
+          <option value="white">white</option>
+          <option value="black">black</option>
+          <option value="blue">blue</option>
+          <option value="fawn">fawn</option>
+          <option value="brindle" selected>brindle</option>
+          <option value="blue brindle">blue brindle</option>
+          <option value="fawn brindle">fawn brindle</option>
+          <option value="red brindle">red brindle</option>
+          <option value="black brindle">black brindle</option>
+          <option value="light brindle">light brindle</option>
+          <option value="dark brindle">dark brindle</option>
+          <option value="red fawn">red fawn</option>
+          <option value="light red fawn">light red fawn</option>
+          <option value="dark red">dark red</option>
+          <option value="black and white">black and white</option>
+          <option value="white and black">white and black</option>
+          <option value="red and white">red and white</option>
+          <option value="white and brindle">white and brindle</option>
+          <option value="white and brindle">white and brindle tick</option>
+        </select>
+        <br />
+        <h3>History</h3>
+        <h4>Racing</h4>
+        <label for="races">Number of races</label>
+        <input name="races" id="number" type="number" placeholder="0" min="0" max="50">
+        <label for="wins">Number of wins</label>
+        <input name="wins" id="wins" type="number" placeholder="0" min="0" max="10">
+        <input type="radio" id="yes" name="injured" value="yes">
+        <label for="yes">yes</label>
+        <input type="radio" id="no" name="injured" value="no">
+        <label for="no">no</label>
+        <p>If "yes" was selected, please provide details of the injury.</p>
+        <textarea name="" id="injury-details" cols="50" rows="10"></textarea>
+        <h4>Medical</h4>
+        <div class="vax">
+          <h5>Vaccinations</h5>
+          <p>Check all the vaccines the hound is up to date on.</p>
+          <input type="checkbox" name="vax" value="parvovirus">
+          <label for="parvovirus">parvovirus</label>
+          <input type="checkbox" name="vax" value="distemper">
+          <label for="distemper">distemper</label>
+          <input type="checkbox" name="vax" value="hepatitis">
+          <label for="hepatitis">hepatitis</label>
+          <input type="checkbox" name="vax" value="rabies">
+          <label for="rabies">rabies</label>
+          <input type="checkbox" name="vax" value="bordetella bronchiseptica">
+          <label for="bordetella bronchiseptica">Bordetella bronchiseptica</label>
+          <input type="checkbox" name="vax" value="Borrelia burgdorferi">
+          <label for="Borrelia burgdorferi">Borrelia burgdorferi</label>
+          <input type="checkbox" name="vax" value="Leptospira bacteria">
+          <label for="Leptospira bacteria">Leptospira bacteria</label>
+        </div>
+        <div class="diseases">
+          <h5>Diseases</h5>
+          <p>Check all the diseases and infections the hound
+            <em>appears</em> to have.</p>
+          <input type="checkbox" name="disease" value="Ehrlichia canis">
+          <label for="Ehrlichia canis">Ehrlichia canis</label>
+          <input type="checkbox" name="disease" value="heart worm">
+          <label for="heart worm">heart worm</label>
+        </div>
+      </fieldset>
+      <input id="submit" type="submit" onclick="alert('Thank you.)">
+
+
+      <!--     SURRENDERER'S INFO -->
+    </form>
+  </div>
+</body>
+
+</html>
