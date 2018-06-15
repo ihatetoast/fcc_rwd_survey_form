@@ -1,7 +1,7 @@
 /* todo: 
 X choose fonts
 X choose colours 
-make a grid layout and apply.
+make a flex layout and apply.
 choose sizes for headlines, fieldsets
 ! in html file, divvy up fieldsets into sub divs for layout. 
 */
@@ -12,27 +12,107 @@ FONTS
 font-family: 'Rubik', sans-serif; -->Rubik:400,400i,700 all headers
 font-family: 'Roboto Mono', monospace; -->p, text
 */
-/* 
-COLORS
-Main Primary color 
-.color-primary-0 { color: #233F7F }	
-.color-primary-1 { color: #305098 }
-.color-primary-2 { color: #29488F }
-.color-primary-3 { color: #203972 }
-.color-primary-4 { color: #193064 }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Rubik', sans-serif;
+}
+p {
+  font-family: 'Roboto Mono', monospace;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2em 3em;
+  background-color: #39303d;
+}
 
+#intro,
+#form-div {
+  padding: 1em 3em;
+  width: 80%;
+}
+/* INTRO PARA */
+#intro {
+  background-color: #edf26a;
+  line-height: 1.25em;
+  margin-bottom: 1em;
+}
+h1 {
+  font-size: 2em;
+  font-weight: 700;
+  margin: 1em auto;
+}
 
-Main Secondary color (1) 
-.color-secondary-1-0 { color: #253981 }	
-.color-secondary-1-1 { color: #32499A }
-.color-secondary-1-2 { color: #2B4191 }
-.color-secondary-1-3 { color: #213373 }
-.color-secondary-1-4 { color: #1B2B65 }
+/* FORM */
+#form-div {
+  background-color: #eeefd0;
+}
 
-Main Secondary color (2)
-.color-secondary-2-0 { color: #22457E }	
-.color-secondary-2-1 { color: #2E5696 }
-.color-secondary-2-2 { color: #274E8D }
-.color-secondary-2-3 { color: #1E3E70 }
-.color-secondary-2-4 { color: #183563 }
-*/
+.color-primary-0 {
+  color: #39303d;
+} /* body */
+.color-primary-1 {
+  color: #4e1068;
+}
+.color-primary-2 {
+  color: #4c245e;
+}
+.color-primary-3 {
+  color: #211327;
+}
+.color-primary-4 {
+  color: #1d0b24;
+}
+
+.color-secondary-1-0 {
+  color: #5aa485;
+} /* Main Secondary color (1) */
+.color-secondary-1-1 {
+  color: #a5c9b9;
+}
+.color-secondary-1-2 {
+  color: #85bba4;
+}
+.color-secondary-1-3 {
+  color: #3a916b;
+}
+.color-secondary-1-4 {
+  color: #23855b;
+}
+
+.color-secondary-2-0 {
+  color: #5b5347;
+} /* Main Secondary color (2) */
+.color-secondary-2-1 {
+  color: #867863;
+}
+.color-secondary-2-2 {
+  color: #766a58;
+}
+.color-secondary-2-3 {
+  color: #716552;
+}
+.color-secondary-2-4 {
+  color: #7b6c54;
+}
+
+.color-complement-0 {
+  color: #edf26a;
+} /* Main Complement color */
+.color-complement-1 {
+  color: #eeefd0;
+} /*form*/
+.color-complement-2 {
+  color: #fbfdb8;
+}
+.color-complement-3 {
+  color: #eff633;
+}
+.color-complement-4 {
+  color: #f4fd00;
+}
