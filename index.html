@@ -16,54 +16,60 @@
     <h1 id="title">Intake Survey Form</h1>
     <p id="description">
       Volunteers: Please fill out one survey form for every hound surrendered by owner, trainer, or shelter. Save as a PDF and
-      email form to somename@bigbottomedhoundies.org. Fields marked with an asterisk (*) are required.
+      email form to your volunteer coordinator. Fields marked with an asterisk (*) are required.
     </p>
   </div>
+  <!-- end intro -->
+
   <div id="form-div">
     <form id="survey-form" action="submit">
-      <label for="intake-date">Intake Date</label>
-      <input type="date" id="intake-date" name="intake-date" required>
-      <!--     VOLUNTEER'S INFO -->
-      <fieldset id="volunteer_info">
-        <legend>
-          <h2>Volunteer's info:</h2>
-        </legend>
-        <label id="name-label" for="name">* Volunteer's Name</label>
-        <input id="name" name="name" type="text" placeholder="your name" required>
-        <label id="email-label" for="email">* email</label>
-        <input id="email" name="email" type="email" placeholder="emailaddress@domain.com" required>
-        <label for="phone">* phone</label>
-        <input type="tel" placeholder="(123)555-5555" required>
-        <label for="group">* Adoption Group</label>
-        <input name="group" type="text" placeholder="adoption group" required>
+      <fieldset id="date-fieldset">
+        <label for="intake-date">*Intake Date</label>
+        <input type="date" id="intake-date" name="intake-date" required>
       </fieldset>
-      <fieldset id="surrenderer">
-        <legend>
-          <h2>Surrenderer's info:</h2>
-        </legend>
-        <label for="surrenderer">* Surrendered by </label>
-        <input name="surrenderer" type="text" placeholder="trainer, track, shelter" required>
-        <label for="surr_email">email</label>
-        <input name="surr_email" type="email" placeholder="email">
-        <label for="phone">* phone</label>
-        <input type="tel" placeholder="(123)555-5555" required>
-      </fieldset>
+      <div class="humans">
+        <!--     VOLUNTEER'S INFO -->
+        <fieldset id="volunteer_info">
+          <legend>
+            <h2>Volunteer's info:</h2>
+          </legend>
+          <label id="name-label" for="name">*Volunteer's Name</label>
+          <input id="name" name="name" type="text" placeholder="your name" required>
+          <label id="email-label" for="email">*email</label>
+          <input id="email" name="email" type="email" placeholder="email@domain.com" required>
+          <label for="phone">*phone</label>
+          <input type="tel" placeholder="(123)555-5555" required>
+          <label for="group">*Adoption Group</label>
+          <input name="group" type="text" placeholder="adoption group" required>
+        </fieldset>
+        <fieldset id="surrenderer_info">
+          <legend>
+            <h2>Surrenderer's info:</h2>
+          </legend>
+          <label for="surrenderer">*Surrendered by </label>
+          <input name="surrenderer" type="text" placeholder="trainer, track, shelter" required>
+          <label for="surr_email">email</label>
+          <input name="surr_email" type="email" placeholder="email">
+          <label for="phone">*phone</label>
+          <input type="tel" placeholder="(123)555-5555" required>
+        </fieldset>
+      </div>
       <fieldset id="hound_info">
         <legend>
           <h2>Hound's info:</h2>
         </legend>
         <h3>Details</h3>
-        <label for="kennel">* Kennel name</label>
-        <input name="kennel" type="text" placeholder="kennel name" required>
+        <label for="kennel">*Kennel name</label>
+        <input name="kennel" type="text" placeholder="Daisy" required>
         <label for="race">Race name</label>
-        <input name="race" type="text" placeholder="race name">
+        <input name="race" type="text" placeholder="Loves-Me-Not">
         <br />
 
         <input type="radio" id="bitch" name="sex" value="bitch">
         <label for="bitch">bitch</label>
         <input type="radio" id="dog" name="sex" value="dog">
         <label for="dog">dog</label>
-        <label id="number-label" for="age">* Estimated age</label>
+        <label id="number-label" for="age">*Age (approx.)</label>
         <input name="age" id="age" type="number" value="1" step="0.1" min="0" max="15" required>
         <br />
         <label for="dam">dam</label>
@@ -71,7 +77,7 @@
         <label for="sire">sire</label>
         <input name="sire" type="text" placeholder="sire name">
         <br />
-        <label for="color">Color</label>
+        <label for="color">*Color</label>
         <select id="dropdown" name="color" required>
           <option value="white">white</option>
           <option value="black">black</option>
@@ -135,12 +141,11 @@
           <label for="heart worm">heart worm</label>
         </div>
       </fieldset>
-      <input id="submit" type="submit" onclick="alert('Thank you.)">
+      <input id="submit" type="submit">
 
-
-      <!--     SURRENDERER'S INFO -->
     </form>
   </div>
+  <!-- end form-div -->
 </body>
 
 </html>

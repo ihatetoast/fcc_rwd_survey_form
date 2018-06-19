@@ -20,21 +20,22 @@ h5,
 h6 {
   font-family: 'Rubik', sans-serif;
 }
-p {
+p,
+label,
+input {
   font-family: 'Roboto Mono', monospace;
 }
 body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 2em 3em;
+  padding: 1em;
   background-color: #39303d;
 }
 
 #intro,
 #form-div {
-  padding: 1em 3em;
-  width: 80%;
+  padding: 1em;
 }
 /* INTRO PARA */
 #intro {
@@ -43,9 +44,19 @@ body {
   margin-bottom: 1em;
 }
 h1 {
-  font-size: 2em;
+  font-size: 1.7em;
   font-weight: 700;
-  margin: 1em auto;
+  margin: 0.5em auto;
+}
+h2 {
+  font-size: 1.4em;
+  font-weight: 400;
+  margin-top: 0.5em;
+  margin-right: 0.3em;
+}
+#description {
+  font-family: 'Rubik', sans-serif;
+  color: #4e1068;
 }
 
 /* FORM */
@@ -53,6 +64,63 @@ h1 {
   background-color: #eeefd0;
 }
 
+.humans {
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 414px) {
+  h1 {
+    font-size: 1.9em;
+  }
+}
+@media screen and (min-width: 768px) {
+  h1 {
+    font-size: 2.5em;
+    text-align: center;
+  }
+  #intro,
+  #form-div {
+    margin: 1em 3em;
+  }
+  #date-fieldset {
+    float: right;
+  }
+  .humans {
+    flex-direction: row;
+    clear: both;
+  }
+  #volunteer_info,
+  #surrenderer_info {
+    margin: 0.5em;
+    flex: 1;
+  }
+  #hound_info {
+    margin: 0.5em;
+  }
+}
+@media screen and (min-width: 1024px) {
+  #intro,
+  #form-div {
+    margin: 1em 5em;
+  }
+}
+#volunteer_info,
+#surrenderer_info,
+#hound_info {
+  border: 2px groove #4e1068;
+  border-radius: 6px;
+  padding-bottom: 1em;
+}
+#volunteer_info,
+#surrenderer_info,
+#hound_info {
+  display: flex;
+  flex-direction: column;
+}
+#volunteer_info input,
+#surrenderer_info input {
+  width: 96%;
+}
 .color-primary-0 {
   color: #39303d;
 } /* body */
