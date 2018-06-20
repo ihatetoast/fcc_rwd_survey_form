@@ -1,17 +1,3 @@
-/* todo: 
-X choose fonts
-X choose colours 
-make a flex layout and apply.
-choose sizes for headlines, fieldsets
-! in html file, divvy up fieldsets into sub divs for layout. 
-*/
-
-/* it's a survey, so don't overdo the styling. Do it and be done. */
-/*
-FONTS
-font-family: 'Rubik', sans-serif; -->Rubik:400,400i,700 all headers
-font-family: 'Roboto Mono', monospace; -->p, text
-*/
 h1,
 h2,
 h3,
@@ -22,8 +8,19 @@ h6 {
 }
 p,
 label,
-input {
+input,
+textarea {
   font-family: 'Roboto Mono', monospace;
+}
+label {
+  margin-top: 0.5em;
+  margin-bottom: 0.25em;
+}
+input,
+#dropdown,
+textarea {
+  font-size: 1em;
+  padding: 5px;
 }
 body {
   display: flex;
@@ -49,10 +46,29 @@ h1 {
   margin: 0.5em auto;
 }
 h2 {
-  font-size: 1.4em;
-  font-weight: 400;
+  font-size: 1.5em;
+  font-weight: bold;
   margin-top: 0.5em;
   margin-right: 0.3em;
+}
+h3 {
+  font-size: 1.4em;
+  font-weight: bold;
+  margin-top: 0.3em;
+  margin-right: 0.3em;
+}
+h4 {
+  font-size: 1.3em;
+  color: #4e1068;
+  font-style: italic;
+  margin-top: 0.2em;
+  margin-right: 0.2em;
+}
+h5 {
+  font-size: 1em;
+  color: #4e1068;
+  margin-top: 0.2em;
+  margin-right: 0.2em;
 }
 #description {
   font-family: 'Rubik', sans-serif;
@@ -67,6 +83,96 @@ h2 {
 .humans {
   display: flex;
   flex-direction: column;
+}
+.details {
+  display: flex;
+  flex-direction: column;
+}
+.details1 input,
+.details2 input {
+  margin-bottom: 0.5em;
+}
+.details1,
+.details2 {
+  flex: 1;
+  margin: 0.5em;
+}
+.histories {
+  margin: 0.5em;
+}
+textarea {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+#volunteer_info,
+#surrenderer_info,
+#hound_info {
+  border: 2px groove #4e1068;
+  border-radius: 6px;
+  padding-bottom: 1em;
+}
+#volunteer_info,
+#surrenderer_info,
+#hound_info {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5em;
+}
+#volunteer_info input,
+#surrenderer_info input,
+.input-field,
+textarea {
+  width: 96%;
+}
+.sex-age {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 0.5em;
+}
+.sex {
+  margin-right: 1em;
+}
+#number-label {
+  margin-left: 0.3em;
+}
+
+#number-label {
+  margin-right: 1em;
+}
+#dropdown {
+  background-color: white;
+  color: #4e1068;
+  font-size: 1em;
+  font-family: 'Roboto Mono', monospace;
+  border-radius: 0;
+  border-width: 0;
+}
+.races-wins {
+  display: flex;
+  flex-direction: column;
+}
+.label-input {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+.diseases {
+  display: flex;
+  flex-direction: column;
+}
+
+#submit {
+  border: 2px solid #4e1068;
+  width: 100%;
+  border-radius: 2px;
+  background: white;
+  color: #39303d;
+  font-size: 1.5em;
+}
+#submit:hover {
+  color: #4e1068;
+  background-color: #edf26a;
 }
 @media screen and (min-width: 414px) {
   h1 {
@@ -97,90 +203,20 @@ h2 {
   #hound_info {
     margin: 0.5em;
   }
+  .races-wins {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  #submit {
+    width: fit-content;
+  }
 }
 @media screen and (min-width: 1024px) {
   #intro,
   #form-div {
     margin: 1em 5em;
   }
-}
-#volunteer_info,
-#surrenderer_info,
-#hound_info {
-  border: 2px groove #4e1068;
-  border-radius: 6px;
-  padding-bottom: 1em;
-}
-#volunteer_info,
-#surrenderer_info,
-#hound_info {
-  display: flex;
-  flex-direction: column;
-}
-#volunteer_info input,
-#surrenderer_info input {
-  width: 96%;
-}
-.color-primary-0 {
-  color: #39303d;
-} /* body */
-.color-primary-1 {
-  color: #4e1068;
-}
-.color-primary-2 {
-  color: #4c245e;
-}
-.color-primary-3 {
-  color: #211327;
-}
-.color-primary-4 {
-  color: #1d0b24;
-}
-
-.color-secondary-1-0 {
-  color: #5aa485;
-} /* Main Secondary color (1) */
-.color-secondary-1-1 {
-  color: #a5c9b9;
-}
-.color-secondary-1-2 {
-  color: #85bba4;
-}
-.color-secondary-1-3 {
-  color: #3a916b;
-}
-.color-secondary-1-4 {
-  color: #23855b;
-}
-
-.color-secondary-2-0 {
-  color: #5b5347;
-} /* Main Secondary color (2) */
-.color-secondary-2-1 {
-  color: #867863;
-}
-.color-secondary-2-2 {
-  color: #766a58;
-}
-.color-secondary-2-3 {
-  color: #716552;
-}
-.color-secondary-2-4 {
-  color: #7b6c54;
-}
-
-.color-complement-0 {
-  color: #edf26a;
-} /* Main Complement color */
-.color-complement-1 {
-  color: #eeefd0;
-} /*form*/
-.color-complement-2 {
-  color: #fbfdb8;
-}
-.color-complement-3 {
-  color: #eff633;
-}
-.color-complement-4 {
-  color: #f4fd00;
+  .details {
+    flex-direction: row;
+  }
 }
